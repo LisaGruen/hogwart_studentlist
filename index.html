@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercise11C.01.01</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="header">
+        <h1>Studentlist</h1>
+      </div>
+    </nav>
+
+    <main class="studentlist">
+      <template>
+        <div class="grid-container">
+          <div class="grid-item">
+            <article class="student">
+              <img src="portraits/abbott_h.png" alt="student image" />
+              <section class="student_info">
+                <h2 class="firstName">Student name</h2>
+                <h2 class="middleName">Student name</h2>
+                <h2 class="nickName">Student name</h2>
+                <h2 class="lastName">Student name</h2>
+                <div class="house">Name house</div>
+                <button class="button_details">read more</button>
+              </section>
+            </article>
+          </div>
+        </div>
+      </template>
+    </main>
+    <footer></footer>
+    <div class="modal-background">
+      <div class="modal-wrapper">
+        <div class="crest" alt="crest"></div>
+        <div>
+          <h3 class="modalFirstName">Student name</h3>
+          <h3 class="modalMiddleName">Student name</h3>
+          <h3 class="modalNickName">Student name</h3>
+          <h3 class="modalLastName">Student name</h3>
+          <div class="modal-house">House</div>
+        </div>
+      </div>
+      <label id="theme-changer">
+        Choose theme
+        <select name="theme" id="theme">
+          <option value="gryffindor">Gryffindor theme</option>
+          <option value="hufflepuff">Hufflepuff theme</option>
+          <option value="ravenclaw">Ravenclaw theme</option>
+          <option value="slytherin">Slytherin theme</option>
+        </select>
+      </label>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
