@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Karla|Montserrat&display=swap");
 
 body {
-    font-family: 'Roboto';
+    font-family: "Montserrat";
 
     background: url(images/backgroundpattern.png) top left repeat;
     background-position: top left;
@@ -14,64 +14,73 @@ nav {
 
 }
 
+/*Live Display with information about students in total, expelled etc.*/
+.display_wrapper {
+    height: 20 vw;
+    display: grid;
+    grid-template-columns: 20px 50% 50% 20px;
+    grid-template-rows: 50% 50%;
+    background-color: beige;
+    padding: 20px;
+  }
+  
+  .display1 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  
+  .display2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+  
+  .display3 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  
+  .display4 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+
 h1 {
-    font-family: 'Roboto', ;
+    font-family: "Karla";
     font-size: 2rem;
     letter-spacing: 1px;
     
 }
 
-.modalFirstName {
-display: inline-block;
-    font-size: 8vw;
-    letter-spacing: 1px;
-}
-.modalMiddleName {
-    display: inline-block;
-        font-size: 8vw;
-        letter-spacing: 1px;
-    }
-    .modalNickName {
-        display: inline-block;
-            font-size: 8vw;
-            letter-spacing: 1px;
-        }
-        .modalLastName {
-            display: inline-block;
-                font-size: 8vw;
-                letter-spacing: 1px;
-            }
 
-.modal-house {
- 
-    font-size: 5vw;
-}
 
 img {
     border: 0px solid #8d8989;
     border-radius: 10px 10px 10px 10px;
 }
 
-.studentlist {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
+
 
 .grid-container {
-    display: grid;
+    display: flex;
     padding: 5px;
-    width: 10vw;
+    width: 100%;
 
 }
 
 .grid-item {
     width: 100%;
     padding: 20px;
-    text-align: center;
-    background: #efe2ba;
-    border-radius: 5px 5px 45px 5px;
+    background-color: beige;
+    border-radius: 5px 5px 5px 5px;
 }
-
 
 
 /** buttons**/
@@ -80,7 +89,7 @@ img {
     border-radius: 3px;
     border-color: #4056a1;
     display: inline-block;
-    background-color: #efe2bA;
+    background-color: beige;
     cursor: pointer;
     color: #4056a1;
     font-size: .8em;
@@ -123,11 +132,28 @@ img {
 [value="slytherin"] {
     color: var(--quandary-color);
 }
-
+.portrait { 
+    width: 90%;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+   
+}
 .crest {
     background-size: contain;
     background-repeat: no-repeat;
+    width: 50px;
+   
+
 }
+.modalPrefect {
+    grid-column-start: 2;}
+
+    .modalInquSquad {
+        grid-column-start: 2;}
+       
+        
 
 .gryffindor .crest {
     background-image: url('images/Gryffindor.png');
@@ -149,39 +175,141 @@ img {
 
 .modal-background {
     position: fixed;
-    z-index: 10;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 400px;
    
-
+  left: 30vw;
+  top: 10vw;
+  z-index: 20;
+ 
 }
 
 .modal-wrapper {
-    display: grid;
-    grid-template-columns: auto auto;
+    display: inline-grid;
+    width: 600px;
+    height: 400px;
+    grid-template-columns: 200px 100%;
+    grid-template-rows: 100px 100px;
     margin: 1em;
     padding: 2em;
 }
 
-.gryffindor .modal-wrapper {
+.gryffindor .rectangle1 {
+    margin-top: 10px;
+    display: inline-block;
+    height: 50px;
+    width: 100px;
     background-color: var(--primary-color);
-    border-color: brown;
-}
-
-.hufflepuff .modal-wrapper {
+   
+  }
+  .gryffindor .rectangle2 {
+    margin-top: 10px;
+    display: inline-block;
+    height: 50px;
+    width: 100px;
     background-color: var(--secondary-color);
-}
+  
+  }
 
-.ravenclaw .modal-wrapper {
-    background-color: var(--tertiary-color);
-}
+  .hufflepuff .rectangle1 {
+    margin-top: 10px;
+    display: inline-block;
+    height: 50px;
+    width: 100px;
+    background-color: var(--secondary-color);
+   
+  }
+  .hufflepuff .rectangle2 {
+    margin-top: 10px;
+    display: inline-block;
+    height: 50px;
+    width: 100px;
+    background-color: black;
+  
+  }
 
-.slytherin .modal-wrapper {
+  
+  .slytherin .rectangle1 {
+    margin-top: 10px;
+      display: inline-block;
+    height: 50px;
+    width: 100px;
     background-color: var(--quandary-color);
+   
+  }
+  .slytherin .rectangle2 {
+    margin-top: 10px;
+      display: inline-block;
+    height: 50px;
+    width: 100px;
+    background-color: darkgray;
+  
+  }
+
+  
+  .ravenclaw .rectangle1 {
+    margin-top: 10px;
+    display: inline-block;
+    height: 50px;
+    width: 100px;
+    background-color: var(--tertiary-color);
+   
+  }
+  .ravenclaw .rectangle2 {
+      margin-top: 10px;
+      display: inline-block;
+    height: 50px;
+    width: 100px;
+    background-color:  rgb(160, 126, 88);
+  
+  }
+
+.modal-wrapper {
+    background-color: #FCEAC1;
+
 }
+
 
 .hide {
     display: none;
 }
+
+.modalFirstName {
+    display: inline-block; 
+    font-size: 2rem;
+        letter-spacing: 1px;
+        
+    }
+    .modalMiddleName {
+        display: inline-block;
+        font-size: 2rem;
+            letter-spacing: 1px;  
+           
+        }
+        .modalNickName {
+            display: inline-block;
+            font-size: 2rem;
+                letter-spacing: 1px;  
+              
+            }
+            .modalLastName {
+                display: inline-block;
+                    font-size: 2rem;
+                    letter-spacing: 1px;  
+                   
+                }
+    
+    .modal-house {
+    font-size: 1rem;}
+      
+      
+    
+
+    /*Buttons*/
+
+.filter { background-color:rgb(160, 126, 88); 
+        border: none;
+        color:#FCEAC1;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;}
