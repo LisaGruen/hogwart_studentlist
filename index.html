@@ -11,49 +11,107 @@
   <body>
     <nav>
       <div class="header">
-        <h1>Studentlist</h1>
+        <h1>Hogwart Students</h1>
       </div>
     </nav>
+    <div class="display_wrapper">
+      <div class="display1">12 students in each house</div>
+      <div class="display2">24 students in total (not expelled)</div>
+      <div class="display3">05 expelled students</div>
+      <div class="display4">20 students displayed</div>
+    </div>
+
+    <p>
+      <button class="filter" data-filter="house" data-value="*">all</button>
+      <button class="filter" data-filter="house" data-value="gryffindor">
+        Gryffindor
+      </button>
+      <button class="filter" data-filter="house" data-value="hufflepuff">
+        Hufflepuff
+      </button>
+      <button class="filter" data-filter="house" data-value="slytherin">
+        Slytherin
+      </button>
+      <button class="filter" data-filter="house" data-value="ravenclaw">
+        Ravenclaw
+      </button>
+    </p>
+    <p>
+      <button class="filter" data-filter="status" data-value="inquSquad">
+        Inquisitorial squad
+      </button>
+      <button class="filter" data-filter="status" data-value="prefect">
+        Prefect
+      </button>
+      <button class="filter" data-filter="status" data-value="expel">
+        Expelled Students
+      </button>
+    </p>
+
+    <hr />
+    <label for="sortSelect">Sort by</label>
+    <select id="sortSelect">
+      <option value="lastName">Last name</option>
+      <option value="firstName">First name</option>
+      <option value="house">House name</option>
+    </select>
 
     <main class="studentlist">
-      <template>
-        <div class="grid-container">
-          <div class="grid-item">
-            <article class="student">
-              <img src="portraits/abbott_h.png" alt="student image" />
-              <section class="student_info">
-                <h2 class="firstName">Student name</h2>
-                <h2 class="middleName">Student name</h2>
-                <h2 class="nickName">Student name</h2>
-                <h2 class="lastName">Student name</h2>
-                <div class="house">Name house</div>
-                <button class="button_details">read more</button>
-              </section>
-            </article>
-          </div>
-        </div>
-      </template>
+      
     </main>
+
+    <template>
+      <div class="grid-container">
+        <div class="grid-item">
+          <article class="student">
+            <section class="studentInfo">
+              <h2 class="firstName">Student name</h2>
+              <h2 class="middleName">Student name</h2>
+              <h2 class="nickName">Student name</h2>
+              <h2 class="lastName">Student name</h2>
+              <div class="house">Name house</div>
+              
+              <button class="button_details">read more</button>
+            </section>
+          </article>
+        </div>
+      </div>
+    </template>
+
     <footer></footer>
-    <div class="modal-background">
+    <div class="modal-background hide">
       <div class="modal-wrapper">
         <div class="crest" alt="crest"></div>
-        <div>
+        <img
+          class="portrait"
+          src="portraits/abbott_h.png"
+          alt="student image"
+        />
+        <div> <div class="modal-house">House</div>
           <h3 class="modalFirstName">Student name</h3>
           <h3 class="modalMiddleName">Student name</h3>
           <h3 class="modalNickName">Student name</h3>
-          <h3 class="modalLastName">Student name</h3>
-          <div class="modal-house">House</div>
+          <h3 class="modalLastName">Student name</h3> 
+          
+          <h3 class="BloodStatus">Blood Status</h3> 
+    
+          <input type="checkbox" id="inquSquad" name="Squad" value="Squad">        
+          <label for="inquSquad">Inquisitorial Squad</label><br><br>
+          <input type="checkbox" id="prefect" name="prefect" value="prefect">
+          <label for="prefect">Prefect</label><br><br>
+          <button id="expel-student">Expell student</button><br><br>
+          <div class="rectangle1"></div>
+          <div class="rectangle2"></div>
         </div>
       </div>
-      <label id="theme-changer">
+     <!--- <label id="theme-changer">
         Choose theme
         <select name="theme" id="theme">
           <option value="gryffindor">Gryffindor theme</option>
           <option value="hufflepuff">Hufflepuff theme</option>
           <option value="ravenclaw">Ravenclaw theme</option>
           <option value="slytherin">Slytherin theme</option>
-        </select>
+        </select>-->
       </label>
     </div>
     <script src="script.js"></script>
